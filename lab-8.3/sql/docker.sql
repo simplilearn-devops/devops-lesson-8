@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS docker;
 
 CREATE TABLE docker (
-   id         INT          NOT NULL,
+   id         INT          NOT NULL AUTO_INCREMENT,
    event_time DATETIME     NOT NULL,
    severity   VARCHAR(40)  NOT NULL,
    message    VARCHAR(200) NOT NULL,
