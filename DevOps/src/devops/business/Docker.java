@@ -15,9 +15,13 @@ public class Docker {
 	private String message ;
 	
 	public Docker() {
-		eventTime = new Date() ;
-		severity = "INFO" ;
-		message = "None" ;
+		this( new Date(), "None" ) ;
+	}
+	
+	public Docker( Date eventTime, String message ) {
+		this.eventTime = eventTime ;
+		this.severity = "INFO" ;
+		this.message = message ;
 	}
 
 	public int getId() {
@@ -54,7 +58,6 @@ public class Docker {
 
 	@Override
 	public String toString() {
-		return "Docker [id=" + id + ", eventTime=" + eventTime + ", severity=" + severity + ", message=" + message
-				+ "]";
+		return "Docker [id=" + id + ", eventTime=" + eventTime + ", severity=" + severity + ", message=" + message + "]";
 	}
 }

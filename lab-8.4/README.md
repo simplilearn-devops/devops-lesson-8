@@ -35,7 +35,7 @@ Go to the Libraries tab and do the following:
 * Select _Add Library_ and ad the JUnit 4 library.  
 * Select _Add Class Folder_ and add the resources folder.  
 * Select _Add Jars_ open the DevOps folder and if there is a lib folder
-open that and add all jars from the logging and hibernate folders.  
+open that and add all jars from all of the folders under lib.  
 * Select OK and everything should compile.
 
 ### Step 4
