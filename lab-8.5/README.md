@@ -1,4 +1,4 @@
-# Exercise 8.6 Camel Integration
+# Exercise 8.5 Camel Integration
 
 Use Apache Camel to get Docker events.
 
