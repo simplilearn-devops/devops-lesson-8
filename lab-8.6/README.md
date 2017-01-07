@@ -1,4 +1,4 @@
-# Exercise 8.6 Camel Integration
+# Exercise 8.6 Monitoring back end.
 
 Use Apache Camel to get Docker events.
 
