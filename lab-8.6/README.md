@@ -7,7 +7,7 @@ Use Apache Camel to get Docker events.
 Start your Google Compute Engine virtual machine and connect to it using SSH.
 
 Change to the exercise directory.  
-`cd`
+`cd`  
 `cd devops-lesson-8/lab-8.6`  
 
 Start the MySQL server.  
