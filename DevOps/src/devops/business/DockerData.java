@@ -8,7 +8,8 @@ public class DockerData {
 	
 	public Docker processDockerData( Event event ) {
 		String status = event.getStatus() != null ? event.getStatus().toUpperCase() : "NONE" ;
+		String from = event.getFrom() != null ? event.getFrom() : "NONE" ;
 		return new Docker( new Date( event.getTime() * 1000L )
-				, "Container " + status + " from " + event.getFrom() + " id " + event.getId() ) ;
+				, event.getType() + " " + status + " from " + from + " id " + event.getId() ) ;
 	}
 }
