@@ -13,8 +13,8 @@ Change to the exercise directory.
 `cd`  
 `cd devops-lesson-8/lab-8.2`  
 
-Create a directory for jenkins and git data.  
-`mkdir jenkins git`  
+Create a directory for jenkins data.  
+`mkdir jenkins`  
 
 Run a Docker Git container from the image we created earlier.  
 `docker run -d -p 2022:22 ---name git git`  

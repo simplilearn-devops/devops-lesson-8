@@ -12,9 +12,8 @@ RUN mkdir /home/git/project.git && \
     git config user.email "git@gitrepo.org" && \
     git config user.name "Git"
 RUN chown -R git.git /home/git && \
-    chmod 600 /home/git/.ssh/authorized_keys
+    chmod 700 /home/git/.ssh
 RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -q -N ""
-VOLUME /home/git
 EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 
