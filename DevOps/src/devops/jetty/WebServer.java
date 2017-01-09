@@ -20,7 +20,6 @@ public class WebServer {
 	public WebServer() throws IOException {
 		server = new Server( PORT ) ;
         
-        // Spring
         WebAppContext webAppContext = new WebAppContext() ;
         webAppContext.setClassLoader( Thread.currentThread().getContextClassLoader() ) ;
         webAppContext.setResourceBase( WEBAPP_DIRECTORY ) ;        
