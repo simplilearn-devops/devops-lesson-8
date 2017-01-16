@@ -15,14 +15,7 @@ Change to the exercise directory.
 
 Create a directory for jenkins data.  
 `mkdir jenkins`  
-
-Run a Docker Git container from the image we created earlier.  
-`docker run -d -p 2022:22 ---name git git`  
-Find out the IP address:  
-`docker inspect git`
-
-Clone the repository.  
-`git clone ssh://git@localhost:2022/home/git/project.git`  
+`chmod 777 jenkins`  
 
 ### Step 2
 
@@ -45,7 +38,7 @@ Generate SSH keys.
 Exit the container with control-D.  
 
 Copy the public keys for the student and jenkins users.  
-`cat ~/.ssh/id_rsa.pub jenkins/.ssh/id_rsa.pub >authorized_keys`  
+`sudo cat ~/.ssh/id_rsa.pub jenkins/.ssh/id_rsa.pub >authorized_keys`  
 
 Build a Git image.  
 `docker build -t git .`
@@ -53,18 +46,18 @@ Build a Git image.
 Start a Git container.  
 `docker run -d -p 2022:22 --name git git`  
 Find its IP address and make a note of it.  
-`docker inspect git`
+`docker inspect git`  
 
 Now run a Jenkins container again and verify that you can connect.  
 `docker run -it --rm -v $PWD/jenkins:/var/jenkins_home jenkins /bin/sh`  
-Now connet to the Git container using SSH. You may have to change the
+Now connect to the Git container using SSH. You may have to change the
 last digit of the IP address to that of your container.  
 `ssh git@172.17.0.5`  
 Answer yes to accept the key.  
 You should connect OK.  
 Exit both containers with control-D control-D.
 
-Clone the Git repository.  
+Clone the Git repository. Ignore the warning about the repository being empty.  
 `git clone ssh://localhost:2022/home/git/project.git` 
 
 Check in some data.  
