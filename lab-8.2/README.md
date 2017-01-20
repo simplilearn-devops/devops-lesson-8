@@ -38,10 +38,10 @@ Generate SSH keys.
 Exit the container with control-D.  
 
 Copy the public keys for the student and jenkins users.  
-`sudo cat ~/.ssh/id_rsa.pub jenkins/.ssh/id_rsa.pub >authorized_keys`  
+`sudo cat ~/.ssh/id_rsa.pub jenkins/.ssh/id_rsa.pub > git/authorized_keys`  
 
 Build a Git image.  
-`docker build -t git .`
+`docker build -t git git`
 
 Start a Git container.  
 `docker run -d -p 2022:22 --name git git`  
