@@ -34,7 +34,7 @@ We need to ensure that we can connect from Jenkins to Git via SSH.
 First run an interactive jenkins container and create SSH keys.  
 `docker run -it --rm -v $PWD/jenkins:/var/jenkins_home jenkins /bin/sh`  
 Generate SSH keys.  
-`ssh-geygen -t rsa`  
+`ssh-keygen -t rsa`  
 Exit the container with control-D.  
 
 Copy the public keys for the student and jenkins users.  
