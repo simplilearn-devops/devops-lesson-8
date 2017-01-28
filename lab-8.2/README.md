@@ -9,11 +9,14 @@ Start the Google Compute Engine virtual machine and connect to it using SSH.
 Check that the firewall allows traffice on port 8080. It should have been set
 up in an earlier lesson.
 
+Delete SSH hosts to prevent problems later.  
+`rm -r ~/.ssh/known_hosts`
+
 Change to the exercise directory. 
 `cd`  
 `cd devops-lesson-8/lab-8.2`  
 
-Create a directory for jenkins data.  
+Create a directory for Jenkins data.  
 `mkdir jenkins`  
 `chmod 777 jenkins`  
 
