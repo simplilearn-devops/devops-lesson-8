@@ -61,7 +61,7 @@ You should connect OK.
 Exit both containers with control-D control-D.
 
 Clone the Git repository. Ignore the warning about the repository being empty.  
-`git clone ssh://localhost:2022/home/git/project.git` 
+`git clone ssh://git@localhost:2022/home/git/project.git` 
 
 Check in some data.  
 `cd project`  
