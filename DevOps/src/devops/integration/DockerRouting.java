@@ -12,7 +12,7 @@ public final class DockerRouting extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
-		from( "docker:events?host=192.168.0.38&port=2375&secure=false" )
+		from( "docker:events?host=127.0.0.1&port=2375&secure=false" )
 		.to( "log:devops.integration" )
 		.to( endPoint ) ;
 		from( DIRECT_ENDPOINT )
