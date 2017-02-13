@@ -35,29 +35,28 @@ Run the script to create a container with MySQL running and create the database.
 
 You will need to monitor the logs to see when MySQL has completed creating
 the student database and is waiting for connections. This may take several minutes
-to complete.
-
+to complete.  
 `docker logs mysql`  
 
 When you see the following in the logs you may continue. Run the command until you see.
 
 `mysqld: ready for connections.`  
 
+Find the IP address of the server.  
+`docker inspect mysql`
+
 ### Step 4
 
 Load data into the student database
 
-Examine the script that will run the MySQL client. Notice that we are using the same image.
-
+Examine the script that will run the MySQL client. Notice that we are using the same image.  
 `cat runclient`  
 
-Run the MySQL client container
-
+Run the MySQL client container.  
 `./runclient`  
 
 You will be placed inside the client container running the Bash command shell.
-You can now type commands to use the database
-
+You can now type commands to use the database. You may need to change the IP address to that of the server.  
 `mysql -h 172.17.0.2 -u student -p monitoring`  
 
 You will be prompted for the password. Enter 'student' as the password  
