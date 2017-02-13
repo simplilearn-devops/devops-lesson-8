@@ -43,13 +43,13 @@ Run the MySQL client.
 Run the MySQL client.  
 `mysql -h 172.17.0.2 -u student -p monitoring`  
 See that data has been written to the database.  
-select * from docker;  
-Exit with contolr-D and control-D.  
+`select * from docker;`  
+Exit with control-D and control-D.  
 
 ### Step 4
 
 Restart the MonitoringServer if it has stopped.  
-Gnerate some more events by starting containers.  
+Generate some more events by starting containers.  
 See that the database gets new records.
 
 There is no need to shut anything down as we will soon be doing the final
