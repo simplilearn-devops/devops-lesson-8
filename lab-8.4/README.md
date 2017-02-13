@@ -22,7 +22,7 @@ Start the vncserver.
 ### Step 2
 
 Start the VNC client on your local machine using x.x.x.x:5901. Where
-x.x.x.x is the external IP address of the virtual machine.
+x.x.x.x is the external IP address of the virtual machine. The password is ‘simplilearn’.  
 
 ### Step 3
 
@@ -35,7 +35,8 @@ Go to the Libraries tab and do the following:
 * Select _Add Library_ and ad the JUnit 4 library.  
 * Select _Add Class Folder_ and add the resources folder.  
 * Select _Add Jars_ open the DevOps folder and if there is a lib folder
-open that and add all jars from all of the folders under lib.  
+open that and add all jars from all of the folders under lib. Eclipse may have
+done this step for you.  
 * Select OK and everything should compile.
 
 ### Step 4
