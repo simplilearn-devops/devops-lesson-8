@@ -30,7 +30,7 @@ Run the code. It will produce an unexpected result due to a thread conflict.
 ### Step 3
 
 Java has a profiler called hprof. See what options are available.  
-`java -agentlib=hprof=help`  
+`java -agentlib:hprof=help`  
 
 Run the code again with the profiler enabled.  
 `java -agentlib:hprof  -cp bin devops.threads.CounterThread`
