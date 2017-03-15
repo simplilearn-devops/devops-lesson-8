@@ -6,6 +6,8 @@ Use Apache Camel to get Docker events.
 
 Start your Google Compute Engine virtual machine and connect to it using SSH.
 
+### Step 2 - skip this step if you have already made these changes.  
+
 We need to change the Docker startup script so that it listens on TCP port
 2375.  
 `sudo vi /etc/systemd/system/multi*/docker.service`  
@@ -28,7 +30,7 @@ Now type the following two HTTP headers then hit enter twice.
 You should see a response from Docker.  
 Exit telnet by typing control-] followed by quit.  
 
-### Step 2
+### Step 3
 
 Start the VNC server.  
 `vncserver`  
@@ -53,14 +55,14 @@ Go back to Eclipse and the integration test should have passed.
 Look through the console output and see what events were reported.
 The actual Docker message is the text starting _Event_.
 
-### Step 3
+### Step 4
 
 Open the files DockerData.java and DockerDataTests.java in Eclipse. Se
 that we are populating a Docker object from Event data. The unit test
 artifically generate the event.  
 Run the unit tests in DockerDataTests.java. They should pass.
 
-### Step 4
+### Step 5
 
 Run the integration tests again. Use the log file output to add
 another unit test to DockerDataTests.java for a different event type.
